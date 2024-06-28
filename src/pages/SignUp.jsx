@@ -16,7 +16,7 @@ const initialValues={
 }    
 const validationSchema=Yup.object().shape({
     userName:Yup.string().required('*userName is required'),
-    email:Yup.string().required('*email is required').matches(/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/),
+    email:Yup.string().matches(/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/,'enter valid mail').required('*email is required'),
     password:Yup.string().min(5,'password must be greater than 5 digits').max(10,'password lessthan 10 digits').required('*password is required'),
     confirmPassword:Yup.string().min(5,'password must be greater than 5 digits').max(10,'password lessthan 10 digits').required('*password is required')
 
@@ -30,11 +30,14 @@ const validationSchema=Yup.object().shape({
             axios.post('https://vidyalayabackend.onrender.com/users/signUp',data).then(res=>{
             toast.success(res.data.message)
             setTimeout(()=>{
-navigate('/login')
+            
+            if(res.data.message.toLowerCase().includes('success')){   
+                 navigate('/login')
+            }
             },4000)   
             console.log(res.data.message)
             })
-            .catch(err=>console.log(err))
+            .catch(err=>toast.info(err.message))
         }
         else{
             toast.info('password must be same')

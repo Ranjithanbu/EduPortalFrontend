@@ -5,7 +5,7 @@ const FullDetailsBtn = () => {
         <div className='btn-container'>
             <ul>
                 <li>
-                    <Link to={'collegeInfo'}>College Info</Link>
+                    <Link to={''}>College Info</Link>
                 </li>
                 <li>
                     <Link to={'courses'}>Courses</Link>

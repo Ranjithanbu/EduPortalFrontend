@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import '../css/nav.css'
 import SearchComponent from './SearchComponent';
-const Nav = ({user}) => {
+import {toast} from 'react-toastify'
+const Nav = ({user,setUser}) => {
 
     return (
         <div id='mainNav'>
@@ -24,7 +25,9 @@ const Nav = ({user}) => {
                             </li>
 
                            
-                            <li id='login' className="item">
+                            {user?<li className='item'><Link className='menu-items' onClick={()=>{setUser('')
+                        toast.info('logout success')
+                        }}>Logout</Link></li>:<li id='login' className="item">
                                 <NavLink className="menu-items" to={'/login'}>Login</NavLink>
 
                                 <div id='displayElement' className='afterhover'>
@@ -33,9 +36,9 @@ const Nav = ({user}) => {
                                     <Link to={'/signUp'}>SignUp</Link>
 
                                 </div>
-                            </li>
+                            </li>}
                             <li className="item">
-                                <NavLink className="menu-items" to={'/profile'}>
+                                <NavLink className="menu-items" >
                                     <img className='rounded-pill' src='https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=sph' width={35 }/>
                                 {user?<p className='userName me-2'>Hi {user}</p>:null}
                                 </NavLink>

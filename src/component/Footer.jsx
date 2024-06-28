@@ -30,10 +30,10 @@ const Footer = () => {
                 </div>
 
                 <div className='navContent'>
-                    <Link>Home</Link>
-                    <Link>About</Link>
-                    <Link>Contact</Link>
-                    <Link>Login</Link>
+                    <Link to={'/'}>Home</Link>
+                    <Link to={'/about'}>About</Link>
+                    <Link to={'/signUp'}>SignUp</Link>
+                    <Link to={'/login'}>Login</Link>
                 </div>
                 <div className='fooerLogo'>
                     <img src="/icons/main.png" alt="logo" />

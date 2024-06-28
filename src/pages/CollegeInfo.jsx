@@ -20,10 +20,10 @@ const [loading,setLoading]=useState(false)
     return (
         loading?<div>
             <HashLoader size={50} color='#0000ff'/>
-        </div>:<div>
+        </div>:data.details?<div>
             <h3 className='infoHead'>college  information</h3>
             <p className='infoDetils'>{data.details}</p>
-        </div>
+        </div>:null
     );
 };
 
