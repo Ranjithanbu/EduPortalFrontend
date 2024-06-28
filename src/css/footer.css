@@ -1,0 +1,106 @@
+.footer{
+    position: relative;
+    margin-top: auto;
+    
+    width:auto;
+    height:35vh;
+    background:rgb(34,56,108);
+display: flex;
+flex-direction: column;
+}
+.top-content{
+    width:auto;
+    height:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+align-items: center;
+border-bottom: 2px solid white;
+}
+.content-1{
+
+    display: flex;
+    flex-direction: column;
+p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    &:nth-child(1){
+        color: white;
+        font-weight: bold;
+
+    }
+}
+}
+.content-2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+a{
+    text-decoration: none;
+    color: white;
+
+}
+}
+.content-3{
+    button{
+        
+        background-color: blueviolet;
+        border: none;
+        color:white;
+     font-weight: 600;
+    }
+}
+
+.bottom-content{
+    display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+.socialMedia{
+
+display: flex;
+flex-direction:row;
+justify-content: space-around;
+align-items: center;
+gap:15px;
+a{
+    color: white;
+    font-size: larger;
+
+    &:hover{
+        transform: scale(1.5);
+        transition: all .5s ease;
+    }
+}
+
+}
+.navContent{
+ 
+
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+        gap:15px;
+          a{
+            color: white;
+            text-decoration: none;
+            font-weight:500;
+            &:hover{
+                text-decoration: underline 2px solid white;
+                text-underline-offset:4px;
+                transition:all 0.5s ease;
+            }
+          }
+}
+.fooerLogo{
+    
+    img{
+        width:75px;
+        margin-top:5px;
+        background-color:azure;
+        border-radius:50%;   
+    }
+}

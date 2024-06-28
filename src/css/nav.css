@@ -1,0 +1,142 @@
+#mainIcon{
+    width:55px;
+    height: 55px;
+}
+#mainNav{
+background: rgb(0, 112, 117);
+}
+.navbar-brand {
+    background:white;
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+text-align: center;
+
+}
+.item {
+    
+    margin: 0 20px;
+}
+
+.item a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+    &:hover{
+        text-decoration: underline 2px solid white;
+        text-underline-offset:4px;
+        
+    }
+}
+.item a.active{
+    
+    text-decoration: underline 2px solid white;
+    text-underline-offset:4px;
+}
+.logoName{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: center;
+    text-decoration: none;
+    
+}
+
+.searchBar{
+    background-color:white;
+        width:70%;
+        border: 2px solid white;
+        border-radius:12px;
+    display: flex;
+    margin-left:9vw;
+    
+    
+    input{
+        width:100% ;
+        background-color: white;
+        outline: none;
+        border: none;
+        border-radius:12px;
+        &::placeholder{
+            
+            font-weight:bold;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+    }
+    }
+   #login{
+    .afterhover{
+        display:none;
+        position: absolute;
+       flex-direction: column;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px;
+        border-radius:10px;
+    }
+
+    &:hover{
+        .afterhover{
+            display: flex;
+        }
+    }
+   }
+      /* a{
+           display: block;
+            text-decoration: none;
+            font-size: medium;
+            font-weight: bold;
+            margin: 5px;
+            padding:0 10px;
+
+            &:hover{
+                background-color: cadetblue;
+                border-radius: 5px;
+                color: white;
+                transition: all 0.4s ease;
+            }
+        }
+    */
+
+    .width-100{
+       
+        width:50%;
+
+    
+    }
+    .suggesion{
+        position: absolute;
+        width:28%;
+        height:25vh;
+       margin-left:120px;
+       
+      
+       overflow-y: auto;
+       font-weight:500;
+    scrollbar-width: none;
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    li{
+        margin:3px;
+        padding:3px;
+        &:hover{
+            background-color: aquamarine;
+        }
+      
+
+    }
+}    
+
+}
+
+.userName{
+    position:absolute;
+    text-transform: capitalize;
+    width: max-content;
+    right: 0;
+    
+    
+}

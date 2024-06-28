@@ -1,0 +1,22 @@
+@keyframes example {
+from   {
+    
+    
+    
+}
+to  {
+    
+}   
+   
+}
+  
+  /* The element to apply the animation to */
+  .contact {
+    
+    background-color: red;   
+    animation-fill-mode:backwards;
+    animation-name: example;
+    animation-duration:18s;
+    animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  }
