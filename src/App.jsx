@@ -28,7 +28,7 @@ const [user,setUser]=useState('')
         <Nav user={user} setUser={setUser}/>
         <ToastContainer position='top-center' />
         <div className=''>
-          <Routes>
+          <Routes> 
             <Route index path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/signUp' element={<SignUp />} />

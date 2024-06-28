@@ -50,7 +50,7 @@ const Login = ({setUser}) => {
                 <div className='d-inline-flex'>
                     <p className='text-white me-1'>you don't have an account</p><Link to={'/signUp'}>Click Here</Link>
                 </div>
-            </form>
+            </form> 
         </div>
     );
 };

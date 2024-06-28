@@ -24,7 +24,7 @@ const [loading,setLoading]=useState(false)
             <h3 className='infoHead'>college  information</h3>
             <p className='infoDetils'>{data.details}</p>
         </div>:null
-    );
+    );  
 };
 
 export default CollegeInfo;

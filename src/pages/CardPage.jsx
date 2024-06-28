@@ -8,7 +8,7 @@ const CardPage = () => {
   const [deepFilter,setDeepFilter]=useState([])  
   const [loading,setLoading]=useState(false)
   const {category,type}=useParams()
-    console.log(type);
+    console.log(type); 
   let filterType=category.split(" ").join("").toLowerCase()
   console.log(filterType)
   

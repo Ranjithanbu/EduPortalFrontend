@@ -108,7 +108,7 @@ const PrivateBtn = () => {
  
  
     return (
-        
+         
                                     <div className='shortWidth'>
                         <button className='govBtn'>
                             Private Colleges

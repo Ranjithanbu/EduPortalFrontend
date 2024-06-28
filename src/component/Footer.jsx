@@ -31,7 +31,7 @@ const Footer = () => {
 
                 <div className='navContent'>
                     <Link to={'/'}>Home</Link>
-                    <Link to={'/about'}>About</Link>
+                    <Link to={'/about'}>About</Link> 
                     <Link to={'/signUp'}>SignUp</Link>
                     <Link to={'/login'}>Login</Link>
                 </div>

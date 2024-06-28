@@ -50,7 +50,7 @@ const validationSchema=Yup.object().shape({
     return (
         <div className='signUp'>
             <form onSubmit={formik.handleSubmit} className='signUp-content'  >
-<h2 className='head'>Sign Up</h2>
+<h2 className='head'>Sign Up</h2>  
  <input type="text" name="userName" id="userName" placeholder='Username' onChange={formik.handleChange}/>
  <span className='text-white text-end'>{formik.errors.userName}</span>                
  <input type="email" name="email" id="email" placeholder='email' onChange={formik.handleChange}/>

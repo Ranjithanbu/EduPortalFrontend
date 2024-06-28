@@ -4,7 +4,7 @@ import '../css/nav.css'
 import SearchComponent from './SearchComponent';
 import {toast} from 'react-toastify'
 const Nav = ({user,setUser}) => {
-
+ 
     return (
         <div id='mainNav'>
             <nav className="navbar navbar-expand-lg ">

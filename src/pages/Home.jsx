@@ -69,7 +69,7 @@ else if(e.currentTarget.name=='bca'){
   
         }
 
-
+ 
 
     return (
         <div>

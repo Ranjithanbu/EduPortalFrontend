@@ -11,7 +11,7 @@ const [loading,setLoading]=useState(false)
  const {id}=useParams()
 useEffect(()=>{
 
-  fetchData(id)
+  fetchData(id) 
   setFindId(id)
 },[])
  
