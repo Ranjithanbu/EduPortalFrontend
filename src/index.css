@@ -2,7 +2,7 @@
     .bg-container{
         
         min-height:100vh;
-        background-image: url('public/WhatsApp Image 2024-06-28 at 2.32.04 PM.jpeg');
+        background-image: url('/WhatsApp Image 2024-06-28 at 2.32.04 PM.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
