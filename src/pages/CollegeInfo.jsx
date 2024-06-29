@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import  axios  from 'axios';
+import {useParams} from 'react-router-dom'
 import {HashLoader} from 'react-spinners'
-const CollegeInfo = ({findId}) => {
+const CollegeInfo = () => {
+  const {clgId}=useParams()  
 const[data,setData]=useState([])
 const [loading,setLoading]=useState(false)
-    useEffect(()=>{
+useEffect(()=>{
 
-   fetchData()
+   fetchData(clgId)
     },[])
-    const fetchData=async(id)=>{
+    const fetchData=async(clgId)=>{
         setLoading(true)
-        axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${findId}`)
+        axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${clgId}`)
         .then(res=>setData(res.data.data))
         .catch(err=>toast.info(err.message))
         .finally(setLoading(false))

@@ -16,11 +16,10 @@ const PrivateBtn = () => {
     const bcomCourses=["Bachelor of Commerce","Financial Accounting","Banking Management","Banking", "Computer Applications","Corporate Secretaryship"]
     const bscCourses=["computer science","physics","chemistry","mathematics","psychology","bio chemistry","fashion design","aviation","visual communication","biotechnology","microbiology","multimedia","animation","game designing","hotel and catering management","zoology","plant biology","plant biotrchnology","electronic media"]
     const bcaCourses=["data science","hons","hearing impaired","cloud technology & information security"]
-    const engiCourses=["Computer Science and Engineering","Information Technology","Information Security Digital Forensics","Electronics and Communication Engineering",
-    "Electronics and Instrumentation Engineering","Electrical and Electronics Engineering","Mechanical Engineering","Chemical Engineering",
-    " Civil Engineering","Bio-Technology","Bio-Medical Instrumentation","Aeronautical Engineering" ]
+    const engiCourses=["computer science and engineering","biomedical engineering","Robotics and automation","mechatronics","civil engineering","electronics and communication engineering","electrical and electronics engineering","mechanical engineering","aeronautical engineering","cyber security ","biotechnology ","information technology ","computer science and business system "]
+    const btechCourses=["Artificial intelligence","data science"," machine learning","Information technology"]
     const medicalCourses=[
-        "mbbs","bds","Anaesthesia Technology",
+        "mbbs","Anaesthesia Technology",
         " Cardiac Technology",
         " Medical Laboratory Technology",
         " Radiology and Imaging Technology",
@@ -123,23 +122,23 @@ const PrivateBtn = () => {
                                     
                                     <div>
                                     <button name='bsc' onClick={(e)=>handleClickFirstBtn(e)} >B.Sc <span className='float-end me-2'>{bsc?"-":"+"}</span></button>
-                                   {bsc&&<ul>{bscCourses.map((item,index)=><li><Link to={`/card/${item}/private`} key={index}>{item}</Link></li>)}</ul>}
+                                   {bsc&&<ul>{bscCourses.map((item,index)=><li><Link to={`/card/${item}/private/bsc`} key={index}>{item}</Link></li>)}</ul>}
                                    
                                     </div>
                                     
                                     <div>
                                    <button name='ba' onClick={(e)=>handleClickFirstBtn(e)}>B.A <span className='float-end me-2'>{ba?"-":"+"}</span></button>
-                                   {ba&&<ul>{artsCourses.map((item,index)=><li><Link to={`/card/${item}/private`} key={index}>{item}</Link></li>)}</ul>}
+                                   {ba&&<ul>{artsCourses.map((item,index)=><li><Link to={`/card/${item}/private/ba`} key={index}>{item}</Link></li>)}</ul>}
                                    
                                    </div>
                                    <div>
                                    <button name='bcom' onClick={(e)=>handleClickFirstBtn(e)}>B.Com <span className='float-end me-2'>{bcom?"-":"+"}</span></button>
-                                    {bcom&&<ul>{bcomCourses.map((item,index)=><li><Link to={`/card/${item}/private`} key={index}>{item}</Link></li>)}</ul>}
+                                    {bcom&&<ul>{bcomCourses.map((item,index)=><li><Link to={`/card/${item}/private/bcom`} key={index}>{item}</Link></li>)}</ul>}
 
                                    </div>
                                    <div>
                                    <button name='bca' onClick={(e)=>handleClickFirstBtn(e)}>BCA <span className='float-end me-2'>{bca?"-":"+"}</span></button>
-                                    {bca&&<ul>{bcaCourses.map((item,index)=><li><Link to={`/card/${item}/private`} key={index}>{item}</Link></li>)}</ul>}
+                                    {bca&&<ul>{bcaCourses.map((item,index)=><li><Link to={`/card/${item}/private/bca`} key={index}>{item}</Link></li>)}</ul>}
 
                                    </div>
                                 </div>}
@@ -153,13 +152,13 @@ const PrivateBtn = () => {
                                     
                                     <div>
                                     <button name='be' onClick={(e)=>handleClickFirstBtn(e)} >BE<span className='float-end me-2'>{be?"-":"+"}</span></button>
-                                   {be&&<ul>{engiCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                   {be&&<ul>{engiCourses.map((item,index)=><li><Link to={`/card/${item}/government/be`} key={index}>{item}</Link></li>)}</ul>}
                                    
                                     </div>
                                     
                                     <div>
-                                   <button name='ba' onClick={(e)=>handleClickFirstBtn(e)}>B.Tech<span className='float-end me-2'>{btech?"-":"+"}</span></button>
-                                   {btech&&<ul>{artsCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                   <button name='btech' onClick={(e)=>handleClickFirstBtn(e)}>B.Tech<span className='float-end me-2'>{btech?"-":"+"}</span></button>
+                                   {btech&&<ul>{btechCourses.map((item,index)=><li><Link to={`/card/${item}/government/btech`} key={index}>{item}</Link></li>)}</ul>}
                                    
                                    </div>
                                     
@@ -172,7 +171,7 @@ const PrivateBtn = () => {
                             <li className='nestedList'>
                                 <button className='mainBtn' name='medical' onClick={(e)=>handleClickFirstBtn(e)}>Medical <span className='float-end me-2'>{medical?"-":"+"}</span></button>
                                {medical&&<ul>
-{medicalCourses.map((item,index)=><li><Link to={`/card/${item}/private`} key={index}>{item}</Link></li>)}
+{medicalCourses.map((item,index)=><li><Link to={`/card/${item}/private/medical`} key={index}>{item}</Link></li>)}
                                </ul>
                                
                                }

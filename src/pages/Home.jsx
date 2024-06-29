@@ -96,23 +96,23 @@ else if(e.currentTarget.name=='bca'){
                                     
                                     <div>
                                     <button name='bsc' onClick={(e)=>handleClickFirstBtn(e)} >B.Sc <span className='float-end me-2'>{bsc?"-":"+"}</span></button>
-                                   {bsc&&<ul>{bscCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                   {bsc&&<ul>{bscCourses.map((item,index)=><li><Link to={`/card/${item}/government/bsc`} key={index}>{item}</Link></li>)}</ul>}
                                    
                                     </div>
                                     
                                     <div>
                                    <button name='ba' onClick={(e)=>handleClickFirstBtn(e)}>B.A <span className='float-end me-2'>{ba?"-":"+"}</span></button>
-                                   {ba&&<ul>{artsCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                   {ba&&<ul>{artsCourses.map((item,index)=><li><Link to={`/card/${item}/government/ba`} key={index}>{item}</Link></li>)}</ul>}
                                    
                                    </div>
                                    <div>
                                    <button name='bcom' onClick={(e)=>handleClickFirstBtn(e)}>B.Com <span className='float-end me-2'>{bcom?"-":"+"}</span></button>
-                                    {bcom&&<ul>{bcomCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                    {bcom&&<ul>{bcomCourses.map((item,index)=><li><Link to={`/card/${item}/government/bcom`} key={index}>{item}</Link></li>)}</ul>}
 
                                    </div>
                                    <div>
                                    <button name='bca' onClick={(e)=>handleClickFirstBtn(e)}>BCA <span className='float-end me-2'>{bca?"-":"+"}</span></button>
-                                    {bca&&<ul>{bcaCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                    {bca&&<ul>{bcaCourses.map((item,index)=><li><Link to={`/card/${item}/government/bca/bca`} key={index}>{item}</Link></li>)}</ul>}
 
                                    </div>
                                 </div>}
@@ -124,7 +124,7 @@ else if(e.currentTarget.name=='bca'){
                                 {engineering&&
                                 <div>
                                    <button name='be' onClick={(e)=>handleClickFirstBtn(e)}>BE & B.Tech<span className='float-end me-2'>{be?"-":"+"}</span></button>
-                                    {be&&<ul>{engiCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}</ul>}
+                                    {be&&<ul>{engiCourses.map((item,index)=><li><Link to={`/card/${item}/government/be`} key={index}>{item}</Link></li>)}</ul>}
 
                                    </div>}
                                 
@@ -135,7 +135,7 @@ else if(e.currentTarget.name=='bca'){
                             <li className='nestedList'>
                                 <button className='mainBtn' name='medical' onClick={(e)=>handleClickFirstBtn(e)}>Medical <span className='float-end me-2'>{medical?"-":"+"}</span></button>
                                {medical&&<ul>
-{medicalCourses.map((item,index)=><li><Link to={`/card/${item}/government`} key={index}>{item}</Link></li>)}
+{medicalCourses.map((item,index)=><li><Link to={`/card/${item}/government/medical`} key={index}>{item}</Link></li>)}
                                </ul>
                                
                                }

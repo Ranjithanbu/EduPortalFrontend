@@ -20,7 +20,6 @@ import Courses from './pages/Courses'
 
 function App() {
   const [count, setCount] = useState(0)
-const [findId,setFindId]=useState('')
 const [user,setUser]=useState('')
   return (
     <>
@@ -29,20 +28,20 @@ const [user,setUser]=useState('')
         <ToastContainer position='top-center' />
         <div className=''>
           <Routes> 
-            <Route index path='/' element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/signUp' element={<SignUp />} />
             <Route path='/login' element={<Login setUser={setUser} />} />
            
-            <Route path='/card/:category/:type' element={<CardPage />} />
+            <Route path='/card/:category/:type/:branch' element={<CardPage />} />
             <Route path='*' element={<PageNotFound />} />
-            <Route path='/fullDetails/:id' element={<FullDetails setFindId={setFindId} />}>
-<Route index path='' element={<CollegeInfo findId={findId}/>}/>
-<Route path='courses' element={<Courses findId={findId}/>}/>
+            <Route path='/fullDetails/:id' element={<FullDetails />}>
+            <Route index={true}  path='info/:clgId'  element={<CollegeInfo />}/>
+            <Route path='courses/:clgIds' element={<Courses />}/>
             </Route>
           </Routes>
         </div>
-       <Footer/> 
+      
       </BrowserRouter>
     </>
   )

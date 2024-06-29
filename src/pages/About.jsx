@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/about.css'
+import Footer from '../component/Footer';
 const About = () => {
     return (
         <div className='about '>
@@ -33,6 +34,7 @@ const About = () => {
             <p className='paras'>5. *Career Resources:* Guidance on career paths, internships, and job opportunities related to various fields of study
             </p>
         </div>
+        <Footer/>
         </div>
     );
 };

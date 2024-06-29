@@ -4,13 +4,14 @@ import '../css/cardPage.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import {HashLoader} from 'react-spinners'
+import Footer from '../component/Footer';
 const CardPage = () => {
   const [deepFilter,setDeepFilter]=useState([])  
   const [loading,setLoading]=useState(false)
-  const {category,type}=useParams()
-    console.log(type); 
+  const {category,type,branch}=useParams()
+    console.log(branch);
   let filterType=category.split(" ").join("").toLowerCase()
-  console.log(filterType)
+  
   
   useEffect(()=>{
     fetchData()
@@ -20,6 +21,7 @@ const CardPage = () => {
     const fetchData=async()=>{
     setLoading(true)
     let college=await axios.get('https://vidyalayabackend.onrender.com/colleges/getAllData').then(res=>(res.data.data))
+    
     let filtredCollege=college.filter((item,index)=>item.collegeType.toLowerCase()==type)
 
     setDeepFilter(filtredCollege.filter((item,index)=>{
@@ -40,8 +42,6 @@ const CardPage = () => {
   setLoading(false)     
     
     }
-
-
 
 console.log(deepFilter)
     return (
@@ -78,22 +78,10 @@ console.log(deepFilter)
 
 
            }
-            
+<Footer/>            
                     </div>
     );
 };
 
 export default CardPage;
 
-// .replace(college.collegeType[0],college.collegeType[0].toUpperCase())
-// useEffect(()=>{
-//   fetchData()
-  
-//    },[]) 
-  
-//   const fetchData=async()=>{
-  
-//   await axios.get('http://localhost:4000/colleges/getAllData').then(res=>console.log(res.data.data))
-  
-  
-//   }

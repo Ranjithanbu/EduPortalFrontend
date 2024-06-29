@@ -3,8 +3,7 @@
     width:100%;
     height:auto;
     background-color:whitesmoke;
-    border: 2px solid blue;
-    padding:20px 30px;
+   padding:20px 30px;
 }
 .e-container{
     
@@ -45,8 +44,11 @@ width: 100%;
             a{
             text-decoration: none;
             font-weight: bold;
-            color: rgb(53, 31, 31);
-
+            color: blue;
+            &.active{
+                text-decoration: underline 2px solid blue;
+            }
+                 
         }
     }
     }

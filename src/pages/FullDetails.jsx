@@ -4,6 +4,9 @@ import '../css/fullDetails.css'
 import FullDetailsBtn from '../component/FullDetailsBtn';
 import  axios  from 'axios';
 import {toast} from 'react-toastify'
+import {HashLoader} from 'react-spinners'
+import Footer from '../component/Footer';
+
 const FullDetails = ({setFindId}) => {
  
 const[currentClg,setCurrentClg]=useState([])
@@ -12,7 +15,7 @@ const [loading,setLoading]=useState(false)
 useEffect(()=>{
 
   fetchData(id) 
-  setFindId(id)
+  
 },[])
  
 const fetchData=async(id)=>{
@@ -25,7 +28,9 @@ axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${id}`)
 }
  console.log(currentClg);
  return (
-      loading?<h1 className='text-center mt-5'>loading...</h1>:<div className='f-container'>
+  <>
+      {loading?<div className='spinner'><HashLoader/></div>:
+      <><div className='f-container'>
           <div className='e-container'>
           <div className='imgContainer'>
                <img src={currentClg?.image} alt="image" />
@@ -37,7 +42,7 @@ axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${id}`)
           <a className='text-decoration-none' href={`https://www.google.com/maps/search/${currentClg?.college}/@13.0593168,80.2800977,18z/data=!3m1!4b1?entry=ttu`}><i className='bi bi-geo-alt me-1 '></i>{currentClg?.location}</a>
           </div>
             <div className='detailNav'>
-               <FullDetailsBtn/>                
+               <FullDetailsBtn collegeId={currentClg._id}/>                
             </div>
             <div>
                 
@@ -46,6 +51,10 @@ axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${id}`)
           </div>
           <Outlet/>
         </div>
+        <Footer/>
+        </>
+        }
+        </>
     );
 };
 

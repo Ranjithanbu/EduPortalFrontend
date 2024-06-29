@@ -42,7 +42,7 @@ const Login = ({setUser}) => {
         <div className='login-conatainer'>
             <form onSubmit={formik.handleSubmit} className='login-content'  >
                 <h2 className='head'>Login</h2>
-                <input type="text" name="userName" id="userName" placeholder='Username' onChange={formik.handleChange} />
+                <input type="text" name="userName" id="userName" placeholder='userName' onChange={formik.handleChange} />
                 <span className='text-white text-end'>{formik.errors.userName}</span>
                 <input type="password" name="password" id="password" placeholder='password' onChange={formik.handleChange} />
                 <span className='text-white text-end'>{formik.errors.email}</span>

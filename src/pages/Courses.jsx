@@ -1,16 +1,18 @@
 import React,{ useEffect,useState } from 'react';
 import axios from 'axios'
 import {toast} from 'react-toastify'
-const Courses = ({findId}) => {
+import {useParams} from 'react-router-dom'
+const Courses = () => {
+    const {clgIds}=useParams()
     const[data,setData]=useState([])
 const [loading,setLoading]=useState(false)
     useEffect(()=>{
 
-   fetchData()
+   fetchData(clgIds)
     },[])
-    const fetchData=async(id)=>{
+    const fetchData=async(clgIds)=>{
         setLoading(true)
-        axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${findId}`)
+        axios.get(`https://vidyalayabackend.onrender.com/colleges/getOne/${clgIds}`)
         .then(res=>setData(res.data.data))
         .catch(err=>toast.info(err.message))
         .finally(setLoading(false))
