@@ -17,7 +17,7 @@ const PrivateBtn = () => {
     const bscCourses=["computer science","physics","chemistry","mathematics","psychology","bio chemistry","fashion design","aviation","visual communication","biotechnology","microbiology","multimedia","animation","game designing","hotel and catering management","zoology","plant biology","plant biotrchnology","electronic media"]
     const bcaCourses=["data science"]
     const engiCourses=["computer science and engineering","civil engineering","electronics and communication engineering","electrical and electronics engineering","mechanical engineering","aeronautical engineering","biotechnology ","information technology "]
-    const btechCourses=["Artificial intelligence","data science"," machine learning","Information technology"]
+    const btechCourses=["Information technology"]
     const medicalCourses=[
         "mbbs","Anaesthesia Technology",
         " Cardiac Technology",
